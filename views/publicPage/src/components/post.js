@@ -26,7 +26,7 @@ class Post extends React.Component {
   getData(post_id){
     $.ajax({
       type:"GET",
-      url:"http://localhost:8080/api/singlePost",
+      url:"/api/singlePost",
       contentType: "application/json; charset=utf-8",
       headers:{post_id:post_id},
       success:(response) =>{

@@ -25,7 +25,7 @@ class ListPrompt extends React.Component {
     if(this.state.posts.length ==0){ //prevents repeated requests
       $.ajax({
         type:"GET",
-        url:"http://localhost:8080/api/relatedPosts",
+        url:"/api/relatedPosts",
         contentType: "application/json; charset=utf-8",
         headers:{project_id:project_id},
         success:(response) =>{

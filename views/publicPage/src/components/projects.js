@@ -8,8 +8,8 @@ class Projects extends React.Component {
     this.state = {
       noProjects:false,
       projects:[],
-      mobileMenuOpen:false,
-      parentURL:"https://506ec12ec0da.ngrok.io"
+      mobileMenuOpen:false
+  
 
     }
 
@@ -34,7 +34,7 @@ class Projects extends React.Component {
   getProjects(){
     $.ajax({
       type:"GET",
-      url:this.state.parentURL+"/api/project",
+      url:"/api/project",
       contentType: "application/json; charset=utf-8",
       headers:{token:this.getCookie("token")},
       success:(response) =>{

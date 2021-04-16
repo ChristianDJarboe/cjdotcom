@@ -35,7 +35,7 @@ class SingleProject extends React.Component {
   getData(){
     $.ajax({
       type:"GET",
-      url:"http://localhost:8080/api/singleProject",
+      url:"/api/singleProject",
       contentType: "application/json; charset=utf-8",
       headers:{project_id:this.props.data.id},
       success:(response) =>{

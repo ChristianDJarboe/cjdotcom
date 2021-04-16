@@ -113,7 +113,26 @@ app.get("/",(req,res)=>{
     app.use(express.static('./views/publicPage/build', express.static('static')));  //required for images and fonts
     res.sendFile(__dirname + "/views/publicPage/build/index.html");   
 })
-
+app.get("/about",(req,res)=>{
+  app.use(express.static(__dirname+"/views/publicPage/build/static"));            //required for css and js
+  app.use(express.static('./views/publicPage/build', express.static('static')));  //required for images and fonts
+  res.sendFile(__dirname + "/views/publicPage/build/index.html");   
+})
+app.get("/projects",(req,res)=>{
+  app.use(express.static(__dirname+"/views/publicPage/build/static"));            //required for css and js
+  app.use(express.static('./views/publicPage/build', express.static('static')));  //required for images and fonts
+  res.sendFile(__dirname + "/views/publicPage/build/index.html");   
+})
+app.get("/singleProject/*",(req,res)=>{
+  app.use(express.static(__dirname+"/views/publicPage/build/static"));            //required for css and js
+  app.use(express.static('./views/publicPage/build', express.static('static')));  //required for images and fonts
+  res.sendFile(__dirname + "/views/publicPage/build/index.html");   
+})
+app.get("/post/*",(req,res)=>{
+  app.use(express.static(__dirname+"/views/publicPage/build/static"));            //required for css and js
+  app.use(express.static('./views/publicPage/build', express.static('static')));  //required for images and fonts
+  res.sendFile(__dirname + "/views/publicPage/build/index.html");   
+})
 app.listen(port, function(){
     console.log("listening on "+port);
 })

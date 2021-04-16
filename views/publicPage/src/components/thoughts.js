@@ -6,8 +6,7 @@ class Thoughts extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      posts:[],
-      parentURL:"https://506ec12ec0da.ngrok.io"
+      posts:[]
     }
   }
   componentDidMount(){
@@ -27,7 +26,7 @@ class Thoughts extends React.Component {
   getPosts(){
     $.ajax({
       type:"GET",
-      url:this.state.parentURL+"/api/thought",
+      url:"/api/thought",
       contentType: "application/json; charset=utf-8",
       headers:{token:this.getCookie("token")},
       success:(response) =>{
