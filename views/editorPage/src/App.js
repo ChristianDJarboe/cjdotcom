@@ -45,7 +45,7 @@ class App extends React.Component {
     console.log(data);
     $.ajax({
         type:"POST",
-        url:"http://localhost:8080/auth/login",
+        url:"/auth/login",
         data:JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         success:(response) =>{
